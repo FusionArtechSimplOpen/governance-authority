@@ -1,0 +1,81 @@
+appConfig:
+
+  routes:
+    public-urls:
+      - method: GET
+        path: "/actuator/**"
+
+    abac:
+      - method: PATCH
+        path: "/identity-api/mtls/public-key"
+        disable-ephemeral-proof-check: true
+      - method: POST
+        path: "/identity-api/mtls/token"
+        disable-ephemeral-proof-check: true
+      - method: GET
+        path: "/identity-api/v1/mtls/whoami"
+        disable-ephemeral-proof-check: true
+      - method: POST
+        path: "/user-api/mtls/ephemeral-proof"
+        disable-ephemeral-proof-check: true
+      - method: PATCH
+        path: "/identityApi/v1/mtls/public-key"
+        disable-ephemeral-proof-check: true
+      - method: POST
+        path: "/identityApi/v1/mtls/token"
+        disable-ephemeral-proof-check: true
+      - method: GET
+        path: "/identityApi/v1/mtls/whoami"
+        disable-ephemeral-proof-check: true
+      - method: POST
+        path: "/userApi/v1/mtls/ephemeral-proof"
+        disable-ephemeral-proof-check: true
+
+    
+    rbac:
+      - method: GET
+        path: "/fc/**"
+        disable-ephemeral-proof-check: true
+      - method: POST
+        path: "/fc/**"
+        disable-ephemeral-proof-check: true
+      - method: PUT
+        path: "/fc/**"
+        disable-ephemeral-proof-check: true
+      - method: DELETE
+        path: "/fc/**"
+        disable-ephemeral-proof-check: true
+      - method: POST
+        path: "/adapter/**"
+        disable-ephemeral-proof-check: true
+      - method: GET
+        path: "/adapter/**"
+        disable-ephemeral-proof-check: true
+
+    logging:
+      business:
+      - config:
+          operations:
+          - PING_REQUEST
+        method: GET
+        path: /user-api/mtls/ping
+      - config:
+          operations:
+          - ECHO_REQUEST
+        method: GET
+        path: /identity-api/mtls/echo
+      - config:
+          operations:
+          - PUBLISH_CATALOG
+        method: POST
+        path: /fc/self-descriptions/*
+      - config:
+          operations:
+          - PUBLISH_CATALOG
+        method: POST
+        path: /fc/self-descriptions
+      - config:
+          operations:
+          - SEARCH_CATALOG
+        method: POST
+        path: /adapter/api/v1/search/*
