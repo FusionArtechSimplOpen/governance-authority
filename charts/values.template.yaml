@@ -1,25 +1,29 @@
+#values:
+#  repo_URL: https://code.europa.eu/simpl/simpl-open/development/agents/governance-authority.git
+#  branch: v1.3.0
+
 values:
   repo_URL: https://github.com/FusionArtechSimplOpen/governance-authority.git
   branch: main
 
-project: default
-namespaceTag: common
-domainSuffix: int.simpl-europe.eu
+project: ${PROJECT}
+namespaceTag: ${NAMESPACETAG}
+domainSuffix: ${DOMAINSUFFIX}
 
 argocd:
-  appname: common
+  appname: ${NAMESPACE}
   namespace: argocd
 
 cluster:
   address: https://kubernetes.default.svc
-  namespace: common
-  commonToolsNamespace: common
-  issuer: dev-prod
+  namespace: ${NAMESPACE}
+  commonToolsNamespace: ${COMMONNAMESPACE}
+  issuer: ${CLUSTERISSUER}
 
 hashicorp:
   service: "https://vault.common.domainsuffix"
   role: dev-int-role
-  secretEngine: dev-int
+  secretEngine: ${SECRETENGINE}
 
 keycloak:
   repo_URL: 'https://charts.bitnami.com/bitnami'

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# 🏷️ Helm Chart version
+export PROJECT_RELEASE_VERSION="1.3.2"
+
+# 🗂️ Namespace & cluster info
+export NAMESPACE="common"
+export NAMESPACETAG="common"
+export DOMAINSUFFIX="int.simpl-europe.eu"
+export CERT_ISSUER="dev-prod"
+export KUBEMETRICSSVC="kube-prometheus-stack-kube-state-metrics.devsecopstools.svc.cluster.local:8080"
+
+# 🔐 Vault config
+export SECRETENGINE="dev-int"
+export SECRETROLE="dev-int-role"
+
+# 🔗 Repository info
+export REPO_URL="https://github.com/FusionArtechSimplOpen/common-components.git"
+export REPO_BRANCH="main"
+
+# 🚀 ArgoCD metadata
+export ARGOCD_APPNAME="common"
+export ARGOCD_NAMESPACE="argocd"
+
+# 🧠 Agent list
+export AUTHORITY_AGENT="authority1"
+export CONSUMER_AGENT="consumer01"
+export PROVIDER_AGENT="dataprovider01"
+
+# ⚙️ Feature flags
+export KAFKA_AUTOCREATE="true"
+export MAILPIT_ENABLED="true"
+export MONITORING_ENABLED="true"
