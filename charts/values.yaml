@@ -7,12 +7,12 @@ namespaceTag: common
 domainSuffix: int.simpl-europe.eu
 
 argocd:
-  appname: common
+  appname: governance-authority
   namespace: argocd
 
 cluster:
   address: https://kubernetes.default.svc
-  namespace: common
+  namespace: authority1
   commonToolsNamespace: common
   issuer: dev-prod
 
