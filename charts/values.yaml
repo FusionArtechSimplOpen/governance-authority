@@ -1,5 +1,5 @@
 #eurocloud add
-createEjbcaInitSA: false
+createEjbcaInitSA: true
 
 values:
   repo_URL: https://github.com/FusionArtechSimplOpen/governance-authority.git
