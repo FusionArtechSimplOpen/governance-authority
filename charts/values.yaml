@@ -1,21 +1,5 @@
 createEjbcaInitSA: false
 
-argocd:
-  appname: governance-authority
-  namespace: argocd
-
-  
-values:
-  repo_URL: https://github.com/FusionArtechSimplOpen/governance-authority.git
-  branch: main
-
-project: default
-namespaceTag: common
-...
-values:
-  repo_URL: https://github.com/FusionArtechSimplOpen/governance-authority.git
-  branch: main
-
 project: default
 namespaceTag: common
 domainSuffix: int.simpl-europe.eu
@@ -34,6 +18,9 @@ hashicorp:
   service: "https://vault.common.domainsuffix"
   role: dev-int-role
   secretEngine: dev-int
+
+repo_URL: https://github.com/FusionArtechSimplOpen/governance-authority.git
+branch: main
 
 keycloak:
   repo_URL: 'https://charts.bitnami.com/bitnami'
