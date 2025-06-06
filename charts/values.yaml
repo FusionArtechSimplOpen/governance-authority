@@ -1,5 +1,9 @@
 createEjbcaInitSA: false
 
+values:
+  repo_URL: https://github.com/FusionArtechSimplOpen/governance-authority.git
+  branch: main
+
 project: default
 namespaceTag: common
 domainSuffix: int.simpl-europe.eu
