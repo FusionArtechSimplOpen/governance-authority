@@ -1,6 +1,10 @@
 createEjbcaInitSA: false
 
+argocd:
+  appname: governance-authority
+  namespace: argocd
 
+  
 values:
   repo_URL: https://github.com/FusionArtechSimplOpen/governance-authority.git
   branch: main
