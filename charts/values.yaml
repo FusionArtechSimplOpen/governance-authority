@@ -19,7 +19,7 @@ cluster:
   issuer: dev-prod
 
 hashicorp:
-  service: "https://vault.common.domainsuffix"
+  service: "http://vault.common.int.simpl-europe.eu:31234"
   role: dev-int-role
   secretEngine: dev-int
 
