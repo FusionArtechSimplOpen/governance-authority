@@ -1,9 +1,25 @@
 elasticsearch:
-  count: 0
-  
+  count: 1
+  nodeSets:
+    - name: default
+      count: 1
+      config:
+        node.roles: ["master", "data", "ingest"]
+
 kibana: 
-  count: 0
+  count: 1
 
 logstash:
-  count_beats: 0
+  count_beats: 1
   count_syslog: 0
+  
+  
+#elasticsearch:
+#  count: 0
+  
+#kibana: 
+#  count: 0
+
+#logstash:
+#  count_beats: 0
+#  count_syslog: 0
